@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
+  <display-name>ServletConfig</display-name>
+  <servlet>
+    <servlet-name>initconfig</servlet-name>
+    <servlet-class>com.Config</servlet-class>
+    <init-param>
+      <param-name>driver</param-name>
+      <param-value>com.Config.java</param-value>
+    </init-param>
+    <init-param>
+      <param-name>driver2</param-name>
+      <param-value>com.jdbc.java</param-value>
+    </init-param>
+    <init-param>
+      <param-name>driver3</param-name>
+      <param-value>com.odbc.java</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>initconfig</servlet-name>
+    <url-pattern>/init</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>context</display-name>
+    <servlet-name>context</servlet-name>
+    <servlet-class>com.context</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>context</servlet-name>
+    <url-pattern>/context</url-pattern>
+  </servlet-mapping>
+
+  <context-param>
+    <param-name>driver4</param-name>
+    <param-value>com.database.java</param-value>
+  </context-param>
+  <context-param>
+    <param-name>driver5</param-name>
+    <param-value>com.hello.java</param-value>
+  </context-param>
+</web-app>
